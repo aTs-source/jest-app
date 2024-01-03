@@ -1,12 +1,12 @@
 import "./App.css";
+import AppBar from "./AppBar/app-bar";
+import AppContextProvider from "./store/ContextAPI";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <input type="text" placeholder="Name" name="name" id="name" />
-      </header>
-    </div>
+    <AppContextProvider>
+      <AppBar />
+    </AppContextProvider>
   );
 }
 
