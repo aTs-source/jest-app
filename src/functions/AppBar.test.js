@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import AppBar from "../AppBar/app-bar";
 import { AppContext } from "../store/ContextAPI";
 
@@ -24,6 +24,12 @@ test("adds 1 + 2 to equal 3", () => {
   );
 
   const txt = screen.getByText("Home");
+
+  const button = screen.getByRole("button")
+
+  fireEvent.click(button)
+
+  // expect(console.log).toH
 
   expect(txt).toBeInTheDocument();
 });
